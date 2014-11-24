@@ -27,6 +27,11 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    self.colorView.layer.cornerRadius = self.colorView.bounds.size.width/2;
+    self.colorView.layer.masksToBounds = YES;
+}
+
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
